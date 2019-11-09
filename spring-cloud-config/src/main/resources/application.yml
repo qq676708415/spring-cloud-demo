@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      # 配置仓库的分支
+      label: master
+      server:
+        git:
+          # 配置 Git 仓库地址（GitHub、GitLab、码云 ...）
+          uri: https://github.com/qq676708415/spring-cloud-config-file
+          # 配置仓库路径（存放配置文件的目录）
+          search-paths: respo
+          username: 
+          password: 
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
